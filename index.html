@@ -3,314 +3,392 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hidden Tide Villa | Ukulhas, Maldives</title>
-<meta name="description" content="Discover Hidden Tide Villa in Ukulhas, Maldives. Enjoy island experiences, ocean adventures and peaceful accommodation.">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hidden Tide Villa | A Private Island Escape</title>
+<meta name="description" content="Discover Hidden Tide Villa on Ukulhas Island, Maldives. Explore ocean adventures, island culture and your next tropical escape.">
+<meta name="theme-color" content="#f6f3eb">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --green:#263d32;
-  --gold:#b59a70;
-  --cream:#f5f2eb;
-  --white:#fff;
+:root{
+ --cream:#f6f3eb;
+ --green:#203c32;
+ --gold:#b69a70;
+ --ink:#26332d;
+ --muted:#85877f;
+ --white:#fff;
 }
-*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:#333;background:var(--cream)}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink)}
 a{text-decoration:none;color:inherit}
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:20px 7%;background:var(--cream);position:sticky;top:0;z-index:10;
+img{display:block;width:100%;object-fit:cover}
+button,input,select,textarea{font:inherit}
+section{scroll-margin-top:85px}
+.serif{font-family:'Playfair Display',serif}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+h2{font:400 clamp(36px,5vw,57px) 'Playfair Display',serif;color:var(--green)}
+p{line-height:1.8}
+.btn{display:inline-block;background:var(--green);color:white;padding:15px 25px;font-size:10px;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.btn:hover{background:var(--gold)}
+.btn.light{background:var(--cream);color:var(--green)}
+.topbar{text-align:center;background:var(--green);color:white;padding:9px;font-size:10px;letter-spacing:2px}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:var(--cream);position:sticky;top:0;z-index:20}
+.logo{font:25px 'Playfair Display',serif;letter-spacing:2px;color:var(--green)}
+.logo span{display:block;font:8px 'DM Sans',sans-serif;letter-spacing:4px;text-align:center;margin-top:3px}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:11px;letter-spacing:1px}
+.navlinks a:hover{color:var(--gold)}
+.navlinks .navbook{background:var(--green);color:white;padding:13px 18px}
+.menu{display:none;background:none;border:0;font-size:25px;color:var(--green)}
+.hero{height:calc(90vh - 78px);min-height:580px;position:relative;display:grid;place-items:center;text-align:center;color:white;background:linear-gradient(#10251c55,#10251c55),url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=2000') center/cover}
+.hero-content{max-width:850px;padding:25px}
+.hero .eyebrow{color:#f2dfb9}
+.hero h1{font:400 clamp(55px,9vw,105px)/1.04 'Playfair Display',serif;margin:24px 0}
+.hero p{font-size:13px;letter-spacing:1px;margin:auto;max-width:520px}
+.hero .btn{margin-top:30px;background:var(--cream);color:var(--green)}
+.scroll{position:absolute;bottom:24px;font-size:9px;letter-spacing:3px}
+.intro{padding:105px 9%;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.intro img{height:520px}
+.intro-text{max-width:520px}
+.intro h2{margin:17px 0 25px}
+.intro p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.photo-strip{display:grid;grid-template-columns:1.1fr .9fr 1fr;gap:10px;padding:0 5% 90px}
+.photo-strip img{height:310px}
+.center{text-align:center}
+.section-head{max-width:680px;margin:0 auto 45px}
+.section-head h2{margin:14px 0}
+.section-head p{color:var(--muted);font-size:13px}
+.stays{padding:90px 8%;background:#eeece4}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.stay-card{background:white}
+.stay-card img{height:270px}
+.card-body{padding:25px}
+.card-body h3{font:25px 'Playfair Display',serif;color:var(--green);margin-bottom:10px}
+.card-body p{font-size:12px;color:var(--muted)}
+.card-note{font-size:9px;letter-spacing:2px;color:var(--gold);margin-top:17px;text-transform:uppercase}
+.experiences{padding:100px 8%}
+.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.experience{height:370px;position:relative;overflow:hidden;color:white}
+.experience img{height:100%;transition:.7s}
+.experience:hover img{transform:scale(1.06)}
+.experience:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#10251ce8)}
+.experience-text{position:absolute;bottom:23px;left:23px;right:20px;z-index:2}
+.experience h3{font:27px 'Playfair Display',serif;margin-bottom:7px}
+.experience p{font-size:11px;color:#eee;line-height:1.6}
+.quote{background:var(--green);color:white;padding:100px 12%;text-align:center}
+.quote h2{color:white;margin:18px auto;font-size:clamp(30px,5vw,49px);max-width:800px}
+.quote p{font-size:10px;letter-spacing:2px;color:#d8c7a7}
+.gallery{padding:90px 5%}
+.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:220px 220px;gap:12px}
+.gallery-grid img{height:100%}
+.gallery-grid img:first-child{grid-row:span 2}
+.reviews{padding:90px 8%;background:#eeece4}
+.rating-row{display:flex;justify-content:center;gap:50px;margin:35px 0}
+.rating strong{font:35px 'Playfair Display',serif;color:var(--green)}
+.rating p{font-size:11px;color:var(--muted)}
+.review-note{font-size:11px;color:var(--muted);max-width:650px;margin:20px auto}
+.journey{padding:100px 8%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.journey img{height:470px}
+.journey h2{margin:15px 0}
+.journey p{font-size:13px;color:var(--muted);margin-bottom:15px}
+.booking{padding:95px 8%;background:var(--green);color:white}
+.booking h2{color:white;margin:14px 0}
+.booking .section-head p{color:#d1d8d0}
+.booking form{max-width:760px;margin:auto}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field label{display:block;font-size:10px;letter-spacing:1px;margin-bottom:8px;color:#e4dfd2}
+.field input,.field select,.field textarea{width:100%;padding:14px;border:1px solid #ffffff45;background:#ffffff0d;color:white;outline:none;border-radius:0}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field select option{color:#222}
+.field.full{grid-column:1/-1}
+.booking button{width:100%;padding:17px;border:0;background:var(--gold);color:white;letter-spacing:2px;font-size:11px;cursor:pointer;margin-top:20px}
+.booking .small{font-size:10px;color:#d1d8d0;margin-top:14px;text-align:center}
+.contact{padding:90px 8%;text-align:center}
+.contact h2{margin:15px}
+.contact p{font-size:13px;color:var(--muted);margin:10px}
+.contact .btn{margin-top:20px}
+footer{background:#172b23;color:#ddd;padding:55px 8% 25px;text-align:center}
+footer .logo{color:white}
+footer p{font-size:11px;color:#b9c2ba;margin:13px}
+.footerlinks{display:flex;justify-content:center;flex-wrap:wrap;gap:23px;font-size:10px;margin:25px}
+.copyright{border-top:1px solid #ffffff25;padding-top:20px;font-size:9px;color:#9ba79e}
+.whatsapp{position:fixed;bottom:22px;right:22px;z-index:30;background:#218c58;color:white;padding:15px 19px;border-radius:40px;font-size:12px;box-shadow:0 5px 25px #0003}
+@media(max-width:850px){
+ .navlinks{display:none;position:absolute;top:78px;left:0;width:100%;background:var(--cream);padding:25px;flex-direction:column}
+ .navlinks.open{display:flex}
+ .menu{display:block}
+ .intro,.journey{grid-template-columns:1fr;gap:30px}
+ .intro img,.journey img{height:350px}
+ .grid{grid-template-columns:1fr 1fr}
+ .experience-grid{grid-template-columns:1fr 1fr}
+ .photo-strip{grid-template-columns:1fr 1fr}
+ .photo-strip img:last-child{display:none}
 }
-.logo{font:25px 'Playfair Display',serif;color:var(--green)}
-nav .links{display:flex;gap:22px;font-size:13px;align-items:center}
-nav a:hover{color:var(--gold)}
-.hero{
-  min-height:85vh;background:linear-gradient(#0004,#0005),
-  url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1800') center/cover;
-  display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:30px;
-}
-.hero h1{font-size:clamp(45px,7vw,78px);margin:15px 0}
-.hero p{letter-spacing:3px;font-size:12px}
-.btn{display:inline-block;background:var(--gold);color:white;padding:14px 27px;margin-top:22px;font-size:12px;letter-spacing:1px}
-.section{padding:80px 8%;text-align:center}
-.eyebrow{letter-spacing:3px;font-size:11px;color:var(--gold);margin-bottom:13px}
-.section h2{font-size:42px;color:var(--green);margin-bottom:18px}
-.intro{max-width:700px;margin:0 auto;color:#777;line-height:1.9}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:35px;text-align:left}
-.card{background:white;overflow:hidden}
-.card img{width:100%;height:220px;object-fit:cover;display:block}
-.card-content{padding:23px}
-.card h3{font-size:23px;color:var(--green);margin-bottom:10px}
-.card p{font-size:13px;line-height:1.8;color:#777}
-.dark{background:var(--green);color:white}
-.dark h2{color:white}
-.dark .intro{color:#ddd}
-.review{padding:25px;text-align:center;background:white}
-.review img{width:95px;height:95px;border-radius:50%;object-fit:cover;margin-bottom:14px}
-.review h3{font-size:21px;color:var(--green)}
-.review p{margin:13px 0;font-size:13px;line-height:1.8;color:#777}
-.stars{color:var(--gold);letter-spacing:3px}
-form{max-width:650px;margin:30px auto 0;text-align:left}
-form label{font-size:12px;color:#ddd}
-form input,form select,form textarea{
-  width:100%;padding:14px;margin:7px 0 15px;border:1px solid #ddd;
-  background:white;font:14px 'DM Sans',sans-serif;
-}
-form button{width:100%;padding:16px;background:var(--gold);color:white;border:0;cursor:pointer;letter-spacing:1px}
-.activities{background:#fff}
-.contact{background:#eae6dc}
-footer{background:#1c3027;color:#ddd;text-align:center;padding:35px 15px;font-size:12px;line-height:2}
-footer strong{font:23px 'Playfair Display',serif;color:white}
-@media(max-width:750px){
- nav{flex-direction:column;gap:15px}
- nav .links{justify-content:center;flex-wrap:wrap;gap:13px}
- .section{padding:60px 6%}
- .section h2{font-size:34px}
+@media(max-width:550px){
+ nav{padding:0 5%}
+ .hero{min-height:600px}
+ .grid,.experience-grid{grid-template-columns:1fr}
+ .photo-strip{grid-template-columns:1fr 1fr;padding-bottom:55px}
+ .photo-strip img{height:180px}
+ .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px}
+ .gallery-grid img:first-child{grid-row:span 2}
+ .formgrid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .rating-row{gap:20px}
+ .rating strong{font-size:27px}
+ .section-head{margin-bottom:30px}
+ .whatsapp{right:12px;bottom:12px}
 }
 </style>
 </head>
 
 <body>
 
+<div class="topbar">HIDDEN TIDE VILLA · UKULHAS ISLAND · MALDIVES</div>
+
 <nav>
-  <a class="logo" href="#home">HIDDEN TIDE</a>
-  <div class="links">
-    <a href="#home">Home</a>
-    <a href="#about">Our Story</a>
-    <a href="#stay">Accommodation</a>
-    <a href="#experiences">Experiences</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#booking">Book Now</a>
-  </div>
+<a href="#home" class="logo">HIDDEN TIDE<span>VILLA · MALDIVES</span></a>
+<button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('open')" aria-label="Open navigation">☰</button>
+<div class="navlinks">
+<a href="#about">OUR STORY</a>
+<a href="#stay">THE STAY</a>
+<a href="#experiences">EXPERIENCES</a>
+<a href="#gallery">GALLERY</a>
+<a href="#reviews">REVIEWS</a>
+<a href="#booking" class="navbook">ENQUIRE</a>
+</div>
 </nav>
 
 <header class="hero" id="home">
-  <div>
-    <p>AN ISLAND ESCAPE · UKULHAS · MALDIVES</p>
-    <h1>Discover Your<br>Hidden Paradise</h1>
-    <p>Slow down. Breathe deeply. Experience the Maldives.</p>
-    <a class="btn" href="#booking">PLAN YOUR STAY</a>
-  </div>
+<div class="hero-content">
+<p class="eyebrow">A BOUTIQUE ISLAND ESCAPE</p>
+<h1>Somewhere<br><i>Beyond Ordinary.</i></h1>
+<p>Discover the quiet beauty of Ukulhas. A slower rhythm, turquoise horizons and unforgettable island moments.</p>
+<a href="#booking" class="btn">Begin Your Escape</a>
+</div>
+<div class="scroll">SCROLL TO DISCOVER ↓</div>
 </header>
 
-<section class="section" id="about">
-  <p class="eyebrow">WELCOME TO HIDDEN TIDE</p>
-  <h2>A Different Kind of Escape</h2>
-  <p class="intro">
-    Tucked away on the beautiful island of Ukulhas, Hidden Tide Villa
-    invites you to experience the Maldives beyond the ordinary.
-    Discover turquoise waters, authentic island culture and thoughtful
-    hospitality in a peaceful tropical setting.
-  </p>
+<section class="intro" id="about">
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1000" alt="Beautiful turquoise ocean">
+<div class="intro-text">
+<p class="eyebrow">THE ART OF SLOW LIVING</p>
+<h2>A little closer to paradise.</h2>
+<p>Hidden Tide Villa is a villa-style guesthouse on Ukulhas Island in the beautiful North Ari Atoll of the Maldives.</p>
+<p>Beyond the familiar postcard views lies a different kind of island experience: local life, warm hospitality, beautiful beaches and the extraordinary Indian Ocean.</p>
+<p>Come for the ocean. Stay for the moments that make you feel a world away.</p>
+<a class="btn" href="#experiences">Discover Ukulhas</a>
+</div>
 </section>
 
-<section class="section" id="stay">
-  <p class="eyebrow">YOUR PRIVATE RETREAT</p>
-  <h2>Stay With Us</h2>
-  <p class="intro">Find your perfect space to relax and enjoy island living.</p>
-  <div class="grid">
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800" alt="Elegant tropical bedroom">
-      <div class="card-content">
-        <h3>Garden Suite</h3>
-        <p>A calm and comfortable retreat surrounded by tropical charm.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800" alt="Beautiful villa interior">
-      <div class="card-content">
-        <h3>The Hideaway</h3>
-        <p>A cosy escape designed for privacy, comfort and relaxation.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="Luxury tropical accommodation">
-      <div class="card-content">
-        <h3>Tide Residence</h3>
-        <p>Enjoy a spacious island stay with a touch of understated luxury.</p>
-      </div>
-    </article>
-  </div>
+<div class="photo-strip">
+<img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800" alt="Tropical beach">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="White sand beach">
+<img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800" alt="Island coastline">
+</div>
+
+<section class="stays center" id="stay">
+<div class="section-head">
+<p class="eyebrow">YOUR ISLAND RETREAT</p>
+<h2>Stay a little longer.</h2>
+<p>Explore the accommodation options and contact us to confirm the current room categories, rates and availability.</p>
+</div>
+<div class="grid">
+<article class="stay-card">
+<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=900" alt="Comfortable guest room">
+<div class="card-body"><h3>Your Island Room</h3><p>A welcoming space to unwind after a day discovering the island.</p><div class="card-note">Comfort · Rest · Relaxation</div></div>
+</article>
+<article class="stay-card">
+<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900" alt="Beautiful hotel interior">
+<div class="card-body"><h3>Thoughtful Details</h3><p>Enjoy a comfortable stay with the little touches that make travelling special.</p><div class="card-note">Simple · Beautiful · Personal</div></div>
+</article>
+<article class="stay-card">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900" alt="Elegant tropical accommodation">
+<div class="card-body"><h3>Your Private Escape</h3><p>Make yourself at home and discover the beauty of local island living.</p><div class="card-note">Island Living · Maldives</div></div>
+</article>
+</div>
 </section>
 
-<section class="section activities" id="experiences">
-  <p class="eyebrow">EXPLORE THE ISLAND</p>
-  <h2>Experiences & Adventures</h2>
-  <p class="intro">Make your stay unforgettable with ocean adventures and authentic local experiences.</p>
-  <div class="grid">
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" alt="Snorkelling in clear tropical water">
-      <div class="card-content">
-        <h3>Snorkelling & Diving</h3>
-        <p>Discover sea turtles, manta rays and seasonal whale sharks. Explore dive sites including Maaya Thila, Fish Head and Halaveli Wreck.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?w=800" alt="Water sports">
-      <div class="card-content">
-        <h3>Water Sports</h3>
-        <p>Enjoy windsurfing, canoeing and traditional local fishing trips.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800" alt="Tropical sandbank">
-      <div class="card-content">
-        <h3>Sandbank Picnics</h3>
-        <p>Escape to secluded sandbanks for swimming, relaxation and catered meals.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Sunset over the ocean">
-      <div class="card-content">
-        <h3>Dolphin Cruises</h3>
-        <p>Take a private sunset boat trip and watch wild dolphins in their natural surroundings.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800" alt="Island village scenery">
-      <div class="card-content">
-        <h3>Local Island Culture</h3>
-        <p>Explore Ukulhas through village walks, community visits and authentic local experiences.</p>
-      </div>
-    </article>
-  </div>
+<section class="experiences center" id="experiences">
+<div class="section-head">
+<p class="eyebrow">THE ISLAND IS YOURS</p>
+<h2>Moments worth travelling for.</h2>
+<p>From vibrant reefs to quiet sandbanks, discover the experiences that make Ukulhas unforgettable.</p>
+</div>
+<div class="experience-grid">
+<article class="experience">
+<img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900" alt="Snorkelling underwater">
+<div class="experience-text"><h3>Underwater Wonders</h3><p>Snorkelling, scuba diving, turtles, manta rays and seasonal whale sharks. Explore Maaya Thila, Fish Head and Halaveli Wreck.</p></div>
+</article>
+<article class="experience">
+<img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?w=900" alt="Water sports in tropical sea">
+<div class="experience-text"><h3>Ocean Play</h3><p>Windsurfing, canoeing and local fishing trips.</p></div>
+</article>
+<article class="experience">
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900" alt="Secluded sandbank">
+<div class="experience-text"><h3>Sandbank Escapes</h3><p>Swim, relax and enjoy catered picnics on secluded sandbanks.</p></div>
+</article>
+<article class="experience">
+<img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=900" alt="Dolphins in the ocean">
+<div class="experience-text"><h3>Golden Hour Cruises</h3><p>Private sunset boat trips in search of wild dolphins.</p></div>
+</article>
+<article class="experience">
+<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=900" alt="Tropical island scenery">
+<div class="experience-text"><h3>Island Stories</h3><p>Explore Ukulhas, meet the community and discover local village life.</p></div>
+</article>
+<article class="experience">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900" alt="Beautiful island sunset">
+<div class="experience-text"><h3>Find Your Moment</h3><p>Slow down, enjoy the island atmosphere and make time for yourself.</p></div>
+</article>
+</div>
 </section>
 
-<section class="section" id="reviews">
-  <p class="eyebrow">GUEST EXPERIENCES</p>
-  <h2>Memories Made Here</h2>
-  <p class="intro">A glimpse of the experiences our guests might share.</p>
-  <div class="grid">
-    <article class="review">
-      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Illustrative guest portrait">
-      <h3>Aisha M.</h3><small>Maldives</small>
-      <p class="stars">★★★★★</p>
-      <p>"A peaceful island escape. I loved discovering the beauty of Ukulhas."</p>
-    </article>
-    <article class="review">
-      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300" alt="Illustrative guest portrait">
-      <h3>James R.</h3><small>United Kingdom</small>
-      <p class="stars">★★★★★</p>
-      <p>"The dolphin cruise and ocean adventures made our holiday special."</p>
-    </article>
-    <article class="review">
-      <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300" alt="Illustrative guest portrait">
-      <h3>Sofia L.</h3><small>Italy</small>
-      <p class="stars">★★★★★</p>
-      <p>"A beautiful destination with a lovely island atmosphere."</p>
-    </article>
-    <article class="review">
-      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300" alt="Illustrative guest portrait">
-      <h3>Daniel K.</h3><small>Germany</small>
-      <p class="stars">★★★★★</p>
-      <p>"A wonderful opportunity to experience the Maldives beyond the resorts."</p>
-    </article>
-  </div>
-  <p style="font-size:11px;color:#888;margin-top:20px">
-    Demonstration testimonials and illustrative portraits. Replace with genuine guest reviews and approved photographs before publication.
-  </p>
+<section class="quote">
+<p class="eyebrow">THE MALDIVES, A DIFFERENT WAY</p>
+<h2 class="serif">“The best journeys are the ones that make you feel somewhere belongs to you.”</h2>
+<p>HIDDEN TIDE VILLA · UKULHAS</p>
 </section>
 
-<section class="section dark" id="booking">
-  <p class="eyebrow">YOUR ISLAND ESCAPE STARTS HERE</p>
-  <h2>Enquire About Your Stay</h2>
-  <p class="intro">Tell us about your plans. Our team can help you arrange your island experience.</p>
-
-  <form id="bookingForm">
-    <label>Full Name</label>
-    <input type="text" placeholder="Your name" required>
-
-    <label>Email Address</label>
-    <input type="email" placeholder="Your email" required>
-
-    <label>WhatsApp Number</label>
-    <input type="tel" placeholder="Your phone number" required>
-
-    <label>Check-in Date</label>
-    <input type="date" id="checkin" required>
-
-    <label>Check-out Date</label>
-    <input type="date" id="checkout" required>
-
-    <label>Accommodation</label>
-    <select required>
-      <option value="">Choose accommodation</option>
-      <option>Garden Suite</option>
-      <option>The Hideaway</option>
-      <option>Tide Residence</option>
-    </select>
-
-    <label>Number of Guests</label>
-    <select>
-      <option>1 Guest</option>
-      <option selected>2 Guests</option>
-      <option>3 Guests</option>
-      <option>4 Guests</option>
-      <option>5+ Guests</option>
-    </select>
-
-    <label>Interested Activities</label>
-    <select>
-      <option>Choose an activity</option>
-      <option>Snorkelling & Diving</option>
-      <option>Water Sports</option>
-      <option>Sandbank Picnic</option>
-      <option>Dolphin Cruise</option>
-      <option>Local Island Tour</option>
-      <option>Multiple Activities</option>
-    </select>
-
-    <label>Special Requests</label>
-    <textarea rows="4" placeholder="Tell us more about your trip..."></textarea>
-
-    <button type="submit">SUBMIT ENQUIRY</button>
-  </form>
+<section class="gallery center" id="gallery">
+<div class="section-head">
+<p class="eyebrow">A GLIMPSE OF PARADISE</p>
+<h2>The beauty is in the details.</h2>
+<p>A visual invitation to discover island life.</p>
+</div>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1000" alt="Maldives aerial island view">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Tropical beach">
+<img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800" alt="Beach and sea">
+<img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" alt="Underwater adventure">
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800" alt="Turquoise water">
+</div>
 </section>
 
-<section class="section contact" id="contact">
-  <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
-  <h2>Get in Touch</h2>
-  <p class="intro">
-    Hidden Tide Villa<br>
-    Ukulhas Island, Alif Alif Atoll, Maldives<br><br>
-    WhatsApp: xx-xxxx<br>
-    Email: Add villa email
-  </p>
-  <a class="btn" href="#booking">MAKE AN ENQUIRY</a>
+<section class="reviews center" id="reviews">
+<div class="section-head">
+<p class="eyebrow">GUEST FEEDBACK</p>
+<h2>What guests have shared.</h2>
+<p>Public review platform snapshots displayed as reported by the independent UkulhasMaldives listing.</p>
+</div>
+<div class="rating-row">
+<div class="rating"><strong>9.5/10</strong><p>Booking.com</p></div>
+<div class="rating"><strong>4.3/5</strong><p>Google</p></div>
+</div>
+<p class="review-note">Figures reported on the original listing, dated 24 June 2026: Booking.com (19 reviews) and Google (4 reviews). Ratings and review counts may change. Please check the original platforms for current information. These are not independently verified live ratings.</p>
+<a class="btn" href="https://ukulhasmaldives.com/hotels/hidden-tide-villa/" target="_blank" rel="noopener">View Property Information</a>
+</section>
+
+<section class="journey">
+<img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=1000" alt="Beautiful Maldives beach">
+<div>
+<p class="eyebrow">A JOURNEY TO UKULHAS</p>
+<h2>Let the island welcome you.</h2>
+<p>Ukulhas is located in Alif Alif Atoll, North Ari. Travellers generally reach the island from Malé by scheduled speedboat or public ferry.</p>
+<p>Transfer schedules and prices can change. Contact the villa to confirm the best transfer option, departure time and pickup arrangements before travelling.</p>
+<a class="btn" href="#booking">Plan Your Arrival</a>
+</div>
+</section>
+
+<section class="booking center" id="booking">
+<div class="section-head">
+<p class="eyebrow">YOUR ESCAPE STARTS HERE</p>
+<h2>Let's plan something beautiful.</h2>
+<p>Share your travel details. Your enquiry will open directly in WhatsApp so the team can respond and confirm availability, rates and room options.</p>
+</div>
+
+<form id="bookingForm">
+<div class="formgrid">
+<div class="field"><label for="name">FULL NAME</label><input id="name" required placeholder="Your name"></div>
+<div class="field"><label for="email">EMAIL ADDRESS</label><input id="email" type="email" required placeholder="Your email"></div>
+<div class="field"><label for="phone">YOUR WHATSAPP NUMBER</label><input id="phone" type="tel" placeholder="+ country code"></div>
+<div class="field"><label for="guests">NUMBER OF GUESTS</label><select id="guests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option><option>5+ guests</option></select></div>
+<div class="field"><label for="arrival">CHECK-IN</label><input id="arrival" type="date" required></div>
+<div class="field"><label for="departure">CHECK-OUT</label><input id="departure" type="date" required></div>
+<div class="field"><label for="room">ROOM PREFERENCE</label><select id="room"><option>Any available room</option><option>Garden Suite</option><option>The Hideaway</option><option>Tide Residence</option></select></div>
+<div class="field"><label for="activity">EXPERIENCE OF INTEREST</label><select id="activity"><option>Not decided yet</option><option>Snorkelling and diving</option><option>Water sports</option><option>Sandbank picnic</option><option>Dolphin cruise</option><option>Local island tour</option><option>Multiple experiences</option></select></div>
+<div class="field full"><label for="message">ANYTHING ELSE WE SHOULD KNOW?</label><textarea id="message" rows="3" placeholder="Special requests, transfer questions or other details..."></textarea></div>
+</div>
+<button type="submit">REQUEST AVAILABILITY VIA WHATSAPP ↗</button>
+<p class="small">This is an availability enquiry, not an instant reservation. Your stay is confirmed only after the property responds.</p>
+</form>
+</section>
+
+<section class="contact">
+<p class="eyebrow">WE'RE HERE TO HELP</p>
+<h2>Until the tide brings you here.</h2>
+<p>Hidden Tide Villa · Vasha Magu, Ukulhas<br>Alif Alif Atoll, Maldives</p>
+<p>WhatsApp enquiries available below.</p>
+<a href="#booking" class="btn">Make an Enquiry</a>
 </section>
 
 <footer>
-  <strong>HIDDEN TIDE VILLA</strong>
-  <p>Find your own little paradise in the Maldives.</p>
-  <p>Ukulhas Island · Maldives</p>
-  <p>© 2026 Hidden Tide Villa. All rights reserved.</p>
+<a href="#home" class="logo">HIDDEN TIDE<span>VILLA · MALDIVES</span></a>
+<p>A slower rhythm. A beautiful island. A stay to remember.</p>
+<div class="footerlinks">
+<a href="#about">Our Story</a>
+<a href="#stay">Accommodation</a>
+<a href="#experiences">Experiences</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Enquire</a>
+</div>
+<p class="copyright">© 2026 Hidden Tide Villa · Ukulhas, Maldives</p>
 </footer>
 
+<a class="whatsapp" id="whatsappButton" href="#" target="_blank" rel="noopener">☏ &nbsp; WhatsApp Us</a>
+
 <script>
-const checkin = document.getElementById('checkin');
-const checkout = document.getElementById('checkout');
+// Replace this with the villa's WhatsApp number.
+// Use country code and digits only, without + or spaces.
+const VILLA_WHATSAPP = "960XXXXXXX";
 
-checkin.min = new Date().toISOString().split('T')[0];
+function openWhatsApp(message){
+ if(VILLA_WHATSAPP.includes("X")){
+   alert("Please add the villa's real WhatsApp number in the website code first.");
+   return;
+ }
+ window.open("https://wa.me/"+VILLA_WHATSAPP+"?text="+encodeURIComponent(message),"_blank");
+}
 
-checkin.addEventListener('change', () => {
-  checkout.min = checkin.value;
-  if(checkout.value && checkout.value <= checkin.value){
-    checkout.value = '';
-  }
+document.getElementById("whatsappButton").addEventListener("click",function(e){
+ e.preventDefault();
+ openWhatsApp("Hello Hidden Tide Villa! I would like to know more about your accommodation and availability.");
 });
 
-document.getElementById('bookingForm').addEventListener('submit', function(e){
-  e.preventDefault();
+const arrival=document.getElementById("arrival");
+const departure=document.getElementById("departure");
+const today=new Date().toISOString().split("T")[0];
+arrival.min=today;
+departure.min=today;
 
-  if(checkout.value <= checkin.value){
-    alert('Please select a check-out date after your check-in date.');
-    return;
-  }
+arrival.addEventListener("change",()=>{
+ departure.min=arrival.value;
+ if(departure.value && departure.value<=arrival.value) departure.value="";
+});
 
-  alert('Thank you for your enquiry! This is a website demonstration. Please contact the villa directly to confirm your booking.');
-  this.reset();
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+ e.preventDefault();
+
+ if(departure.value<=arrival.value){
+  alert("Please select a check-out date after your check-in date.");
+  return;
+ }
+
+ const message=
+ "Hello Hidden Tide Villa! I would like to request availability.\n\n"+
+ "Name: "+document.getElementById("name").value+"\n"+
+ "Email: "+document.getElementById("email").value+"\n"+
+ "My WhatsApp: "+document.getElementById("phone").value+"\n"+
+ "Guests: "+document.getElementById("guests").value+"\n"+
+ "Check-in: "+arrival.value+"\n"+
+ "Check-out: "+departure.value+"\n"+
+ "Room preference: "+document.getElementById("room").value+"\n"+
+ "Experience: "+document.getElementById("activity").value+"\n"+
+ "Additional requests: "+document.getElementById("message").value+"\n\n"+
+ "Please confirm availability and provide your rates and booking details.";
+
+ openWhatsApp(message);
 });
 </script>
 
